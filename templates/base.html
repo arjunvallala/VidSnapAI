@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>base</title>{% endblock %}
+    <style>
+        navbar{
+            background-color: #8367C7;
+            color:antiquewhite;
+            padding: 15px;
+            margin:0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height:30px;
+            text-align: center;
+        }
+
+        h1{
+            margin: 0;
+            font-size: 24px;
+            color:FF4B3E;
+            font-family: 'Poppins', sans-serif;
+;
+        }
+        h1:hover{
+            color:rgb(154, 217, 230);
+            cursor: pointer;
+        }
+        a{
+            color:antiquewhite;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        footer{
+            background-color: #8367C7;
+            color:antiquewhite;
+            padding: 10px;
+            margin-top: 20px;
+            bottom: 0px;
+            position: relative;
+            width: 100%;
+        }
+        content{
+            background-color: #B3E9C7;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+    </style>
+    {% block styles %}
+    
+    {% endblock %}
+</head>
+<body>
+    <navbar class="navbar">
+        <h1 onclick="window.location.href='/'">VidSnapAI</h1>
+        <a href="/">Home</a>
+        <a href="/create">Create Reels</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/about">About</a>
+    </navbar>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer>
+        <p style="text-align: center; margin-top: 20px;">&copy; 2024 VidSnapAI. All rights reserved.</p>    
+    </footer>
+</body>
+</html>

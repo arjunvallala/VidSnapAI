@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}<title>Gallery</title>{% endblock %}
+
+{% block styles %}
+    
+    <style>
+        video {
+            width: 300px;
+            height: auto;
+            margin: 10px;
+            border: #8367C7 solid 2px;
+            border-radius: 10%;
+        }
+        video:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        h2{
+            text-align: center;
+            margin-top: 20px;
+            font-size:2rem;
+            background-color: #B3E9C7;
+            padding: 10px;
+            border-radius: 5px;
+            color: #8367C7;
+            border: 2px solid #8367C7;
+        }
+        p{
+            text-align: center;
+            font-size: 1.2rem;
+            color: #555;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h2>Gallery</h2>
+    <p>Here you can view your created reels.</p>
+    {% for reel in reels %}
+        <video src="/static/reels/{{ reel }}" controls></video>
+    {% endfor %}
+    
+
+    
+{% endblock %}

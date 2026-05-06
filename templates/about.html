@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}<title>About</title>{% endblock %}
+
+{% block styles %}
+    <style>
+    h2{
+        text-align: center;
+        margin-top: 50px;
+        font-size: 2rem;
+    }
+    p{
+        text-align: center;
+        font-size: 1.2rem;
+        color: #555;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+    footer{
+            background-color: #8367C7;
+            color:antiquewhite;
+            padding: 10px;
+            margin-top: 20px;
+            bottom: 0px;
+            position: fixed;
+            width: 100%;
+    }
+    </style>
+
+{% endblock %}
+
+{% block content %}
+    <h2>About VidSnapAI</h2>
+    <p style="text-align: center; font-size: 1.2rem; color: #555; max-width: 600px; margin: 20px auto;">
+        VidSnapAI is an innovative web application designed to help users create engaging video reels effortlessly. 
+        Whether you're a content creator, marketer, or just someone who loves sharing moments, VidSnapAI provides a seamless experience for generating captivating reels from your media files.
+    </p>
+    <p style="text-align: center; font-size: 1.2rem; color: #555; max-width: 600px; margin: 20px auto;">
+        With VidSnapAI, you can easily upload your videos and images, add personalized text, and let our AI-powered engine do the magic of creating stunning reels that are perfect for sharing on social media platforms.
+    </p>
+{% endblock %}
